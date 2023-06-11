@@ -1,0 +1,64 @@
+/*Importamos fuente de letra */
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+/* A todos los elementos le asignamos tamaño de caja*/
+* {
+  box-sizing: border-box;
+}
+/* caracteristicas de los elementos del body*/
+body {
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+/*tamaño y display del contenedor */
+.contenedor {
+  display: flex;
+  width: 90vw;
+}
+/* caracteristicas de las cartas*/
+.carta {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: #6fcbde;
+  cursor: pointer; /* Mirar cursor */
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  -webkit-transition: all 700ms ease-in; /*efecto de carta */
+}
+/*caracteristicas de los titulos de la carta */
+.carta h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+/* modificacion cuando se agrega clase .active a cada carta*/
+.carta.active {
+  flex: 5;
+}
+/* similar pero al titulo de cada imagen*/
+.carta.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s; /*efecto y su duracion */
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  .carta:nth-of-type(4),
+  .carta:nth-of-type(5) {
+    display: none;
+  }
+}
