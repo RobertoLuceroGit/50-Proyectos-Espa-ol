@@ -1,9 +1,12 @@
+/*importacion de fuente*/
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
+/* comportamiento de alto y ancho de los elementos*/
 * {
   box-sizing: border-box;
 }
 
+/*css de body*/
 body{
     font-family: 'Lato', sans-serif;
     background-color: #333;
@@ -12,6 +15,7 @@ body{
     margin: 0;
 }
 
+/*clase contenedor*/
 .contenedor{
     background-color: #fafafa;
     transform-origin: top left;
@@ -22,15 +26,19 @@ body{
 
 }
 
+/*css efecto cuando se agrega clase .ver-nav*/
 .contenedor.ver-nav{
     transform: rotate(-20deg);
 }
+
+/*posicion de .circulo-contenedor de botones*/
 .circulo-contenedor{
     position:fixed;
     top: -100px;
     left: -100px;
 }
 
+/*css y efecto de circulo*/
 .circulo{
     background-color: #ff7979;
     height: 200px;
@@ -42,10 +50,12 @@ body{
     
 }
 
+/*rotacion del circulo */
 .contenedor.ver-nav.circulo{
     transform: rotate(-70deg);
 }
 
+/*css de botones del circulo*/
 .circulo button{
     cursor: pointer;
     position: absolute;
@@ -58,6 +68,7 @@ body{
     color: #fff;
 }
 
+/*efectos de botones abrir y cerrar*/
 .circulo button:focus{
     outline: none;
 }
@@ -72,6 +83,7 @@ body{
   transform-origin: top left
 }
 
+/*css y efectos del menu desplegable*/
 .contenedor.ver-nav + nav li {
     transform: translateX(0);
     transition-delay: 0.3s;
@@ -123,6 +135,7 @@ nav ul {
     font-weight: bold;
   }
   
+  /*css del contenido de la pagina*/
   .contenido img {
     max-width: 100%;
   }
