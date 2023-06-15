@@ -1,0 +1,55 @@
+/*Importar fuente*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/*comportamiento de todos los elementos*/
+* {
+  box-sizing: border-box;
+}
+
+/*css del cuerpo*/
+body {
+  background-color:darksalmon;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/*margen del titulo*/
+h1 {
+  margin: 10px;
+}
+
+/*css de las cajas*/
+.caja {
+    background-color: cadetblue;
+    color: gainsboro;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+    transform: translateX(400%);
+    transition: transform 0.4s ease;
+  }
+  
+  /*intermitencia de las cajas*/
+  .caja:nth-of-type(even) {
+    transform: translateX(-400%);
+  }
+  
+  /*movimiento de cajas*/
+  .caja.mostrar {
+    transform: translateX(0);
+  }
+  
+  /*tamaño de texto de cajas*/
+  .caja h2 {
+    font-size: 45px;
+  }
