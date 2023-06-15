@@ -1,0 +1,36 @@
+/*fuente importada*/
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+/* comportamiento de elementos*/
+* {
+  box-sizing: border-box;
+}
+
+/*css de body*/
+body {
+  font-family: 'Ubuntu', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+/*css de fondo*/
+.fondo{
+    background: url('https://ca-times.brightspotcdn.com/dims4/default/bf06e95/2147483647/strip/true/crop/1828x1241+0+0/resize/1200x815!/quality/80/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F9f%2Fd2%2F7844fb528616d46b34afc836781f%2F37bb4fba40ac4f0c85180644abf78076') no-repeat center center/cover ;
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: calc(100vw + 60px);
+    height: calc(100vw + 60px);
+    z-index: -1;
+    filter: blur(0px);
+}
+
+/*estilo de cargador*/
+.cargador{
+    font-size: 50px;
+    color: #fff;
+}
