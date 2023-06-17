@@ -1,0 +1,152 @@
+/*importa funte*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/*variables usadas en css*/
+:root {
+  --izq-bg-color: rgba(87, 84, 236, 0.7);
+  --der-bg-color: rgba(43, 43, 43, 0.8);
+  --izq-btn-hover-color: rgba(87, 84, 236, 1);
+  --der-btn-hover-color: rgba(28, 122, 28, 1);
+  --hover-width: 75%;
+  --otro-width: 25%;
+  --velocidad: 1000ms;
+}
+/*comportamiento de elementos*/
+* {
+    box-sizing: border-box;
+  }
+
+/*css del body*/
+body{
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+  }
+/* css de h1*/
+h1{
+    font-size: 4rem;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+/*css de boton*/
+  .btn{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    color: #fff;
+    border: #fff solid 0.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 15rem;
+    padding: 1.5rem;
+  }
+
+  /*color de boton izquierdo cuando se pasa mouse*/
+  .dividir.izquierda .btn:hover{
+    background-color: var(--izq-btn-hover-color);
+    border-color: var(--izq-btn-hover-color);
+  }
+
+  /*color de boton derecho cuando se pasa mouse*/
+  .dividir.derecha .btn:hover{
+    background-color: var(--der-btn-hover-color);
+    border-color: var(--der-btn-hover-color);
+  }
+
+  /*css del contenedor*/
+  .contenedor{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #333;
+  }
+
+/* css de clase dividir*/
+  .dividir{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  /*css fondo izquierdo*/
+  .dividir.izquierda{
+    left: 0;
+    background: url('https://e2.365dm.com/13/05/800x600/168311249_2941386.jpg?20130813223857');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+
+  .dividir.izquierda::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--izq-bg-color);
+  }
+
+    /*css fondo derecho*/
+  .dividir.derecha {
+    right: 0;
+    background: url("https://img.freepik.com/fotos-premium/fragmento-componentes-hardware-computadora-interior-potente-procesador_407240-1421.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .dividir.derecha::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--der-bg-color);
+  }
+
+  /**/
+  .dividir.derecha,
+  .dividir.izquierda,
+  .dividir.derecha::before,
+  .dividir.izquierda::before{
+    transition: all var(--velocidad) ease-in-out;
+  }
+  
+  .hover-izq .izquierda{
+    width: var(--hover-width);
+  }
+
+  .hover-izq .derecha{
+    width: var(--otro-width);
+  }
+
+  .hover-der .derecha{
+    width: var(--hover-width);
+  }
+
+  .hover-der .izquierda{
+    width: var(--otro-width);
+  }
+
+  
+
+  
+@media (max-width: 800px) {
+    h1 {
+      font-size: 2rem;
+      top: 30%;
+    }
+  
+    .btn {
+      padding: 1.2rem;
+      width: 12rem;
+    }
+  }
