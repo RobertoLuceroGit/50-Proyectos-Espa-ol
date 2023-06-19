@@ -1,0 +1,109 @@
+/*fuente iportada*/
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {/*Comportamiento elementos*/
+  box-sizing: border-box;
+}
+
+body {/*Css del body*/
+  background-color: #eafbff;
+  background-image: linear-gradient(
+    to bottom,
+    #eafbff 0%,
+    #eafbff 50%,
+    #5290f9 50%,
+    #5290f9 100%
+  );/*Efecto 2 colores*/
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+nav {/*Css de elemento nav*/
+  background-color: #fff;
+  padding: 20px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: width 0.6s linear;
+  overflow-x: hidden;
+}
+
+nav.activo{/*Tamaño nav activo*/
+    width: 350px;
+}
+
+nav ul{/*menu nav*/
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 0;
+    transition: width 0.6s linear;
+}
+
+nav.activo ul{/*tamaño menu nav*/
+    width: 100%;
+}
+
+nav ul li{/*efecto menu*/
+    transform: rotateY(0deg);
+    opacity: 0;
+    transition: transform 0.6s linear, opacity 0.6s linear;
+}
+
+nav.activo ul li{/*efecto menu activo*/
+    opacity: 1;
+    transform: rotateY(360deg);
+}
+
+nav ul a {/*boton ul*/
+    position: relative;
+    color: #000;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.icono{/*css icono*/
+    background-color: #fff;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+
+.icono:focus{
+    outline: 0;
+}
+.icono .linea{/*css lineas del icono*/
+    background-color: #5290f9;
+    height: 2px;
+    width: 20px;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    transition: transform 0.6s linear;
+}
+
+.icono .linea2{/*css linea 2*/
+    top: auto;
+    bottom: 10px;
+}
+
+
+/*Movimiento de lineas*/
+nav.activo .icono .linea1{
+    transform: rotate(-765deg) translateY(5.5px);
+}
+
+nav.activo .icono .linea2{
+    transform: rotate(765deg) translateY(-5.5px);
+}
