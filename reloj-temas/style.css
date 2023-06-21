@@ -1,0 +1,125 @@
+/*Fuente importada*/
+@import url('https://fonts.googleapis.com/css?family=Heebo:300&display=swap');
+
+* {/*comportamiento de elementos*/
+  box-sizing: border-box;
+}
+
+/*variables de color*/
+:root {
+  --pri-color: #000;
+  --seg-color: #fff;
+}
+
+html {
+  transition: all 0.5s ease-in;
+}
+
+html.oscuro{
+    --pri-color: #fff;
+    --seg-color: #333;
+}
+html.oscuro{
+    background-color: #111;
+    color: var(--pri-color);
+}
+
+body {/*css body*/
+    font-family: 'Heebo', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  .cambiar{/*css cambiar boton*/
+    cursor: pointer;
+    background-color: var(--pri-color);
+    color: var(--seg-color);
+    border: 0;
+    border-radius: 4px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 100px;
+  }
+  .cambiar:focus{outline: none;}
+
+  .contenedor{/*contenedor reloj*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .reloj{/*posicion tamaño reloj*/
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+
+  /*CSS de agujas*/
+  .aguja{
+    background-color: var(--pri-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 65px;
+    width: 3px;
+    transform-origin: bottom center;
+    transition: all 0.5s ease-in;
+  }
+
+  .aguja.hora {
+    transform: translate(-50%, -100%) rotate(0deg);
+  }
+  
+  .aguja.minuto {
+    transform: translate(-50%, -100%) rotate(0deg);
+    height: 100px;
+  }
+  
+  .aguja.segundo {
+    transform: translate(-50%, -100%) rotate(0deg);
+    height: 100px;
+    background-color: #e74c3c;
+  }
+
+  .punto-central{
+    content: '';
+    background-color: var(--pri-color);
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+  }
+
+  /*css de fecha y hora*/
+  .tiempo  {
+    font-size: 60px;
+  }
+  .fecha{
+    color:#aaa;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+  }
+
+  /*?*/
+  .fecha .circulo{
+    background-color: var(--pri-color);
+    color: var(--seg-color);
+    border-radius: 50%;
+    height: 18px;
+    width: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 18px;
+    transition: all 0.5s ease-in;
+    font-size: 12px;
+  }
