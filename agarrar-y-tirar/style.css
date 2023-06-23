@@ -1,0 +1,43 @@
+*{/*comportamiento elementos*/
+    box-sizing: border-box;
+}
+
+body{/*css body*/
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.vacio{ /*cuadro vacio*/
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+    border: solid 3px goldenrod;
+}
+
+.lleno{ /*cuadro lleno*/
+    background-image: url('https://source.unsplash.com/random/150x150');
+    height: 145px;
+    width: 145px;
+    cursor: pointer;
+}
+
+.tomar{ /*borde cuando es tomado*/
+    border: solid 5px gold;
+}
+
+.arrastrar{/*cuadro a llenarse*/
+    background-color: silver;
+    border-color: lightcyan;
+    border-style: dashed;
+}
+
+@media (max-width: 800px){
+    body{ /*posicion depende tamaño ventana*/
+        flex-direction: column;
+    }
+}
