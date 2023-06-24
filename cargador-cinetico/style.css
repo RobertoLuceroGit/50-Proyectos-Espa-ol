@@ -1,8 +1,8 @@
-*{
+*{/*comportamiento elementos*/
     box-sizing: border-box;
 }
 
-body{
+body{/*css body*/
     background-color: #2c3e59;
     display: flex;
     align-items: center;
@@ -12,7 +12,7 @@ body{
     margin: 0;
 }
 
-.cargador{
+.cargador{/*posicion cargador*/
     position: relative;
     height: 80px;
     width: 80px;
@@ -20,7 +20,7 @@ body{
 
 
 .cargador::after,
-.cargador::before{
+.cargador::before{/*posicion y movimiento*/
     content: '';
     position: absolute;
     top: 0;
@@ -32,11 +32,12 @@ body{
     animation: rotarA 2s linear infinite 0.5s;
 }
 
-.cargador::before{
+.cargador::before{/*posicion y rotarB*/
     transform: rotate(90deg);
     animation: rotarB 2s linear infinite;
 }
 
+/*Funciones de rotar A yB*/
 @keyframes rotarA {
     0%,
     25% {
