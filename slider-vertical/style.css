@@ -18,7 +18,7 @@ body {/*tamaño y fuente body*/
     position: relative;
     overflow: hidden;
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
 }
 
 /*css parte izquierda*/
