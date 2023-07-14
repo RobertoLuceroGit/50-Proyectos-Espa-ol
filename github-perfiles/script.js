@@ -57,15 +57,17 @@ function crearCartaUsuario (usuario){
     main.innerHTML = cartaHTML
 }
 
+//Error si no encuentra
 function crearCartaError (msg){
     const cartaHTML =`
-    <div class="card">
+    <div class="carta">
         <h1>${msg}</h1>
     </div>
 `
 main.innerHTML=cartaHTML;
 }
 
+//agregar repos a carta
 function agregarReposACarta(repos){
     const reposEl = document.getElementById('repos')
 
@@ -76,13 +78,14 @@ function agregarReposACarta(repos){
             repoEl.classList.add('repo')
             repoEl.href = repo.html_url
             repoEl.target = '_blank'
+            repoEl.innerText = repo.name
             
             reposEl.appendChild(repoEl)
         })
 }
 
 
-//
+//buscar usuario
 form.addEventListener('submit', (e)=> {
     e.preventDefault()
 
