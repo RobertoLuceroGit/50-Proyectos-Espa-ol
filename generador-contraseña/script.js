@@ -21,12 +21,10 @@ const randomFunc = {
 
 //Copiar en portapapeles
 copiarHTML.addEventListener('click', () =>{
-    const textarea = document.createElement('textarea')
     const contra = resultadoHTML.innerText;
 
-    if(!contra){return}
-
-    
+    if(!contra)
+        {return}    
     navigator.clipboard.writeText(contra)
     alert('Contraseña copiada en portapapeles')
 })
@@ -43,12 +41,13 @@ generarHTML.addEventListener('click',()=>{
 })
 
 //Genera contraseña
-function generarContra(minusF, mayusF, numsF, simbolF, largoF){
+function generarContra(minus, mayus, nums, simbol, largoF){
     let resultadoF=''
-    const contador = minusF + mayusF + numsF + simbolF
-    const arreglo = [{minusF}, {mayusF}, {numsF}, {simbolF}].filter(item => Object.values(item)[0])
+    const contador = minus + mayus + nums + simbol
+    const arreglo = [{minus}, {mayus}, {nums}, {simbol}].filter(item => Object.values(item)[0])
 
-    if (contador === 0){ return ''}
+    if (contador === 0)
+        { return ''}
 
     for(let i=0; i< largoF; i+= contador){
         arreglo.forEach(type =>{

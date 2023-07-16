@@ -1,0 +1,91 @@
+/*Fuente importada*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {/*Comportamiento elementos*/
+  box-sizing: border-box;
+}
+
+body {/*css body*/
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+/*cambio contenedor*/
+.cambio-contenedor{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    width: 200px;
+}
+
+.cambio{
+    visibility: hidden;
+}
+
+/*label*/
+.label{
+    position: relative;
+    background-color: #d0d0d0;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 15px 0;
+    width: 80px;
+    height: 40px;
+}
+
+/*color checked*/
+.cambio:checked + .label{
+    background-color: #e051d4;
+}
+
+/*esfera slide*/
+.balon{
+    background: #fff;
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    align-items: center;
+    justify-content: center;
+    animation: moverOFF 0.3s linear forwards;
+    
+}
+
+/*animacion true*/
+.cambio:checked + .label .balon{
+    animation: moverON 0.3s linear forwards;
+}
+
+/*movimientos funciones*/
+@keyframes moverON {
+    0% {
+      transform: translateX(0) scale(1);
+    }
+    50% {
+      transform: translateX(20px) scale(1.2);
+    }
+    100% {
+      transform: translateX(40px) scale(1);
+    }
+  }
+  
+  @keyframes moverOFF {
+    0% {
+      transform: translateX(40px) scale(1);
+    }
+    50% {
+      transform: translateX(20px) scale(1.2);
+    }
+    100% {
+      transform: translateX(0) scale(1);
+    }
+  }
