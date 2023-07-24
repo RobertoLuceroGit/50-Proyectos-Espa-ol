@@ -29,7 +29,7 @@ h2{
     position: relative;
 }
 
-/*Slidebar*/
+/*Slidebar Css*/
 input[type='range']{
     width: 300px;
     margin: 18px 0;
