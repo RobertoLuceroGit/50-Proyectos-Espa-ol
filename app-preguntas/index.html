@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Preguntas y respuestas</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Contenedor-->
+    <div class="contenedor" id="contenedor">
+        <!--Header-->
+        <div class="header">
+            <!--Pregunta y opciones-->
+            <h2 id="pregunta">Texto pregunta</h2>
+            <ul>
+                <li>
+                    <input type="radio" name="respuesta" id="a" class="respuesta">
+                    <label for="a" id="a-texto">Opcion</label>
+                </li>
+                <li>
+                    <input type="radio" name="respuesta" id="b" class="respuesta">
+                    <label for="b" id="b-texto">Opcion</label>
+                </li>
+                <li>
+                    <input type="radio" name="respuesta" id="c" class="respuesta">
+                    <label for="c" id="c-texto">Opcion</label>
+                </li>
+                <li>
+                    <input type="radio" name="respuesta" id="d" class="respuesta">
+                    <label for="d" id="d-texto">Opcion</label>
+                </li>
+            </ul>
+        </div>
+        <!--Enviar-->
+        <button id="enviar">Enviar</button>
+    </div>
+    <!--Script-->
+    <script src="script.js"></script>
+</body>
+</html>
