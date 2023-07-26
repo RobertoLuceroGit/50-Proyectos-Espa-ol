@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego agarrar insecto</title>
+    <!--Css-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Pantalla inicio 1-->
+    <div class="pantalla">
+        <h1>Agarrar el insecto</h1>
+        <button class="btn" id="start-btn"> Play</button>
+    </div>
+    <!--Eleccion de insecto-->
+    <div class="pantalla">
+        <h1>Que insecto prefieres</h1>
+        <ul class="lista-insectos">
+            <li>
+                <button class="eleccion-btn">
+                    <p>Mosca</p>
+                    <img src="http://pngimg.com/uploads/fly/fly_PNG3946.png" alt="Mosca">
+                </button>
+            </li>
+            <li>
+                <button class="eleccion-btn">
+                    <p>Mosquito</p>
+                    <img src="http://pngimg.com/uploads/mosquito/mosquito_PNG18175.png" alt="Mosquito">
+                </button>
+            </li>
+            <li>
+                <button class="eleccion-btn">
+                    <p>Araña</p>
+                    <img src="http://pngimg.com/uploads/spider/spider_PNG12.png" alt="Araña">
+                </button>
+            </li>
+            <li>
+                <button class="eleccion-btn">
+                    <p>Cucaracha</p>
+                    <img src="http://pngimg.com/uploads/roach/roach_PNG12163.png" alt="Cucaracha">
+                </button>
+            </li>
+        </ul>
+    </div>
+    <!--Pantalla juego-->
+    <div class="pantalla juego-contenedor" id="juego-contenedor">
+        <h3 id="tiempo" class="tiempo">Tiempo: 00:00</h3>
+        <h3 id="puntaje" class="puntaje">Puntaje: 0</h3>
+        <h5 id="mensaje" class="mensaje">Que pasa papu? Estas molesto? <br>
+        Estas jugando un juego imposible</h5>
+    </div>
+    <!--Script-->
+    <script src="script.js"></script>
+</body>
+</html>
